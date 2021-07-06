@@ -25,9 +25,15 @@ SHOW TABLES;
 
 DESCRIBE test;
 
+/* ------------ Daten------------------*/
 
-DROP TABLE IF EXISTS test;
-SHOW TABLES;
+INSERT INTO test(name,age) VALUES ("Grizabella",29);
+
+SELECT * FROM test;
+
+
+#DROP TABLE IF EXISTS test;
+#SHOW TABLES;
 
 
 #SHOW DATABASES;
