@@ -1,7 +1,6 @@
 /* -------- Strukturen ---------*/
 
-/* Datenbanken auf Server anzeigen */
-SHOW DATABASES;
+
 
 /* DB boo löschen fals vorhanden*/
 DROP DATABASE IF EXISTS boo;
@@ -12,14 +11,27 @@ CREATE DATABASE IF NOT EXISTS boo;
 /* DB auswählen */
 USE boo;
 
+
+/*Tabelle Test löschen, fals vorhanden */
+DROP TABLE IF EXISTS boo.test;
+
+/* 
+
+NULL wird nicht mehr zugelassen
+DEFAULT-Werte eintragen
+
+
+*/
+
+
+
 /* Tabelle anlegen, falls noch nicht vorhanden */
-CREATE TABLE IF NOT EXISTS test
+CREATE TABLE IF NOT EXISTS boo.test
 (
-    name VARCHAR(20),
-    age INT
+    name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    age INT NOT NULL DEFAULT 0
 );
 
-SHOW TABLES;
 
 /* Strukturen der Tabelle anzeigen */
 
@@ -30,15 +42,13 @@ DESCRIBE test;
 INSERT INTO test(name,age) VALUES ("Grizabella",29);
 INSERT INTO test(age,name) VALUES (35,"Alonzo");
 INSERT INTO test VALUES ();
-
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
 /*----Tabelleninhalte anzeigen*/
 SELECT * FROM test;
 
-/*Tabelle Test löschen, fals vorhanden */
-DROP TABLE IF EXISTS test;
-SHOW TABLES;
 
 
-SHOW DATABASES;
+
+
 
 
