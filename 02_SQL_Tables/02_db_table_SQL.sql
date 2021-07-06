@@ -1,7 +1,7 @@
 /* -------- Strukturen ---------*/
 
 /* Datenbanken auf Server anzeigen */
-SHOW DATABASES;
+#SHOW DATABASES;
 
 /* DB boo löschen fals vorhanden*/
 DROP DATABASE IF EXISTS boo;
@@ -21,5 +21,15 @@ CREATE TABLE IF NOT EXISTS test
 
 SHOW TABLES;
 
-SHOW DATABASES;
+/* Strukturen der Tabelle anzeigen */
+
+DESCRIBE test;
+
+
+DROP TABLE IF EXISTS test;
+SHOW TABLES;
+
+
+#SHOW DATABASES;
+
 
