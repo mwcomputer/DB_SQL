@@ -31,13 +31,14 @@ INSERT INTO test(name,age) VALUES ("Grizabella",29);
 INSERT INTO test(age,name) VALUES (35,"Alonzo");
 INSERT INTO test VALUES ();
 
+/*----Tabelleninhalte anzeigen*/
 SELECT * FROM test;
 
+/*Tabelle Test löschen, fals vorhanden */
+DROP TABLE IF EXISTS test;
+SHOW TABLES;
 
-#DROP TABLE IF EXISTS test;
-#SHOW TABLES;
 
-
-#SHOW DATABASES;
+SHOW DATABASES;
 
 
