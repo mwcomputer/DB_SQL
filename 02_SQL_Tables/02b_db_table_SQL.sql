@@ -28,6 +28,7 @@ DEFAULT-Werte eintragen
 /* Tabelle anlegen, falls noch nicht vorhanden */
 CREATE TABLE IF NOT EXISTS boo.test
 (
+    # Constraint UNIQUE --> keine Doppelten Namen
     name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",
     age INT NOT NULL DEFAULT 0
 );
