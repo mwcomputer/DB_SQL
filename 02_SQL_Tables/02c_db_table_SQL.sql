@@ -43,6 +43,7 @@ DESCRIBE test;
 
 INSERT INTO test(id,name,age) VALUES (1,"Grizabella",29);
 INSERT INTO test(id,age,name) VALUES (2,35,"Alonzo");
+INSERT INTO test(id,age,name) VALUES (3,35,"Alonzo");
 #INSERT INTO test VALUES ();
 # Doppelte Datensätze werden zugelassen !
 #INSERT INTO test(age,name) VALUES (35,"Big Alonzo");
