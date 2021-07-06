@@ -29,7 +29,8 @@ DEFAULT-Werte eintragen
 CREATE TABLE IF NOT EXISTS boo.test
 (
     
-    id INT NOT NULL PRIMARY KEY,  
+    
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,  
     name VARCHAR(20) NOT NULL DEFAULT "TBA",
     age INT NOT NULL DEFAULT 0
 );
@@ -41,9 +42,9 @@ DESCRIBE test;
 
 /* ------------ Daten------------------*/
 
-INSERT INTO test(id,name,age) VALUES (1,"Grizabella",29);
-INSERT INTO test(id,age,name) VALUES (2,35,"Alonzo");
-INSERT INTO test(id,age,name) VALUES (3,35,"Alonzo");
+INSERT INTO test(name,age) VALUES ("Grizabella",29);
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
 #INSERT INTO test VALUES ();
 # Doppelte Datensätze werden zugelassen !
 #INSERT INTO test(age,name) VALUES (35,"Big Alonzo");
