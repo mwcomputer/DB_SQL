@@ -1,7 +1,7 @@
 /* -------- Strukturen ---------*/
 
 /* Datenbanken auf Server anzeigen */
-#SHOW DATABASES;
+SHOW DATABASES;
 
 /* DB boo löschen fals vorhanden*/
 DROP DATABASE IF EXISTS boo;
@@ -29,6 +29,7 @@ DESCRIBE test;
 
 INSERT INTO test(name,age) VALUES ("Grizabella",29);
 INSERT INTO test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test VALUES ();
 
 SELECT * FROM test;
 
