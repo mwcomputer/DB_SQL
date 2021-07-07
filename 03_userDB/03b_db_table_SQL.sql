@@ -35,6 +35,13 @@ INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("max2",sha1
 
 ALTER TABLE users ADD user_plz INT(5) NOT NULL DEFAULT 12345;
 DESCRIBE users;
+
+UPDATE users SET user_plz = 70367 WHERE id = 1;
+UPDATE users SET user_plz = 63225 WHERE id = 2;
+UPDATE users SET user_plz = 65001 WHERE id = 3;
+
+
+
 SELECT * FROM users;
 
 
