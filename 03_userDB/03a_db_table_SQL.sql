@@ -21,14 +21,15 @@ CREATE TABLE IF NOT EXISTS users
 
 DESCRIBE users;
 
-#Daten 
+/* #Daten Nachteil Password offen lesbar!
 INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("max","1234","Max","Mütze");
 INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("maxine","#7Dx0","Maxine","Mütze");
-
-# Gleiche usernamen werden nicht mehr zugelassen! UNIQUE
 INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("max2","user1234","Max","Mützerich");
-
-
+*/
+# Daten - Besser: PWD verschlüsselt !
+INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("max",sha1("1234"),"Max","Mütze");
+INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("maxine",sha1("#7Dx0"),"Maxine","Mütze");
+INSERT INTO users(user_name,user_pwd,first_name,family_name) VALUES ("max2",sha1("user1234"),"Max","Mützerich");
 SELECT * FROM users;
 
 
