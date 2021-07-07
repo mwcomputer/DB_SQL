@@ -44,4 +44,4 @@ UPDATE users SET user_plz = 65001 WHERE id = 3;
 
 SELECT * FROM users;
 
-
+#erstmal Fertig
