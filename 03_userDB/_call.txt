@@ -4,6 +4,7 @@
 
 
 source 03_userDB/03_db_table_SQL.sql
+source 03_userDB/03a_db_table_SQL.sql
 
 
 
