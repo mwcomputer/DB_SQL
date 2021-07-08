@@ -54,7 +54,7 @@ SELECT
     c_name AS "Unternehmen",
     CONCAT(sector, " | ", industry) AS "Operations"
 FROM ccc_list
-LIMIT 5;
+LIMIT 200,5;
 
 
 
