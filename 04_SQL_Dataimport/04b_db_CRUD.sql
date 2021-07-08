@@ -17,3 +17,16 @@ SELECT cat_name From cats;
 SELECT cat_name,cat_age From cats;
 SELECT cat_age, cat_name From cats;
 SELECT cat_name AS "Name" , cat_age AS "Alter" FROM cats;
+
+
+/* Restriktionen durch WHRE*/
+SELECT
+    cat_name AS "Name",
+    cat_age AS "Alter"
+    FROM cats 
+    #WHERE id = 1
+   #WHERE fur_color = "red"
+       WHERE cat_age  > 35
+
+    ;
+    
