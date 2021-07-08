@@ -30,3 +30,12 @@ SELECT
 
     ;
     
+    
+    /* Delete - Vorsicht!!! */
+    DELETE FROM cats; # Alles ist weg
+    SELECT * FROM cats;#gesamte Tabelle
+    
+    DESCRIBE cats;
+    
+    
+    
