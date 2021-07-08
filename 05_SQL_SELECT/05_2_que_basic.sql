@@ -20,5 +20,6 @@ SELECT
     *
 FROM ccc_list
 #LIMIT 5
-LIMIT 0,5
+#LIMIT 0,5
+LIMIT 200,10 # 10 Zeilen ab 200
 ;
