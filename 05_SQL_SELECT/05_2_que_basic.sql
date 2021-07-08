@@ -16,10 +16,20 @@ Ausgabe beschränken
 
 # Begrenzung auf 5 Zeilen ab 0
 
-SELECT
-    *
-FROM ccc_list
+#SELECT
+  #  *
+#FROM ccc_list
 #LIMIT 5
 #LIMIT 0,5
-LIMIT 200,10 # 10 Zeilen ab 200
-;
+#LIMIT 200,10 # 10 Zeilen ab 200
+#;
+
+
+#--- Abfrage eines Feldes oder einer Feld-Kombi (rows 1-10)
+SELECT
+    ticker,
+    c_name,
+    industry
+FROM
+    ccc_list
+LIMIT 10;
