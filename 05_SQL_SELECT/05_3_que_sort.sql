@@ -1,4 +1,4 @@
-/* WUERIES Basic */
+/* QUERIES Sortierung */
 
 USE boo;
 
@@ -6,6 +6,7 @@ USE boo;
 
 # --- ASC / DSC 
 # --- Sortieren nach Sektor / Aufsteigend  (alphabetisch)
+
 
 
 SELECT 
