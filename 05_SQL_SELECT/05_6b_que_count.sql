@@ -10,7 +10,7 @@ https://dev.mysql.com/doc/refman/5.6/en/aggregate-functions.html#function_count-
 
 
 
-SELECT
+/*SELECT
 DISTINCT sector Industriesektoren
 FROM ccc_list
 ORDER BY sector ASC
@@ -33,4 +33,16 @@ ORDER BY industry ASC
 
 SELECT COUNT(DISTINCT industry) Branchenanzahl
 FROM ccc_list
-;
+;*/
+
+-- Wie viele verschiedene Branchen gibt es 
+-- in den jeweiliegen Industriesektoren?
+
+SELECT
+    sector Industriesektoren, # NICHT aggergiert --> organisch
+    COUNT(DISTINCT industry) AS "Zahl der Branchen"
+    FROM ccc_list
+    GROUP BY sector
+    ORDER BY  Branchen DESC
+    ;
+    
