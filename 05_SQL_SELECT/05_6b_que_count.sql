@@ -2,47 +2,46 @@
 
 USE boo;
 
-/*
-https://dev.mysql.com/doc/refman/5.6/en/counting-rows.html
-https://dev.mysql.com/doc/refman/5.6/en/group-by-handling.html
-https://dev.mysql.com/doc/refman/5.6/en/aggregate-functions.html#function_count-distinct
+/* Links:
+    https://dev.mysql.com/doc/refman/5.6/en/counting-rows.html
+    https://dev.mysql.com/doc/refman/5.6/en/group-by-handling.html
+    https://dev.mysql.com/doc/refman/5.6/en/aggregate-functions.html#function_count-distinct
 */
 
-
-
-/*SELECT
-DISTINCT sector Industriesektoren
+-- Welche VERSCHIEDENEN Sektoren ?
+/*
+SELECT
+    DISTINCT sector Industriesektoren
 FROM ccc_list
 ORDER BY sector ASC
 ;
-
-
--- Wieviele Verschiedene Sektoren 
-/*SELECT
-COUNT(DISTINCT sector)AS  "Anzahl der Sektoren"
-FROM ccc_list
-;*/
-
-
--- Welche Verschiedene Branchen 
+-- Wieviele VERSCHIEDENE Sektoren ?
 SELECT
-DISTINCT industry Branchen
+    COUNT(DISTINCT sector) Sektorenanzahl
+FROM ccc_list
+;
+*/
+
+-- Welche VERSCHIEDENEN Branchen ?
+/*
+SELECT
+    DISTINCT industry Branchen
 FROM ccc_list
 ORDER BY industry ASC
 ;
-
-SELECT COUNT(DISTINCT industry) Branchenanzahl
-FROM ccc_list
-;*/
-
--- Wie viele verschiedene Branchen gibt es 
--- in den jeweiliegen Industriesektoren?
-
+-- Wieviele VERSCHIEDENE Branchen ?
 SELECT
-    sector Industriesektoren, # NICHT aggergiert --> organisch
-    COUNT(DISTINCT industry) AS "Zahl der Branchen"
-    FROM ccc_list
-    GROUP BY sector
-    ORDER BY  Branchen DESC
-    ;
-    
+    COUNT(DISTINCT industry) Branchenzahl
+FROM ccc_list
+;
+*/
+
+-- Wieviele VERSCHIEDENE Branchen gibt es 
+-- in den jeweiligen Industriesektoren?
+SELECT
+    sector Industriesektoren, # NICHT aggregiert --> organisch
+    COUNT(DISTINCT industry) Branchen #aggregiert --> durch Fkt. entstanden
+FROM ccc_list
+GROUP BY sector # bei Kombination nicht aggr. /aggr.
+ORDER BY Branchen DESC
+;
