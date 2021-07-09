@@ -44,7 +44,10 @@ SELECT
     c_name "Unternehmen",
     industry "Branche"
 FROM ccc_list
-WHERE industry = "Media"
+#WHERE industry = "Media"
+#WHERE industry LIKE "Air%"
+WHERE industry LIKE "%ment"
+
 
 
 ORDER BY industry ASC
