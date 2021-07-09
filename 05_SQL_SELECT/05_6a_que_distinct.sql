@@ -11,9 +11,16 @@ LIMIT 20;*/
 -- nur das erste Auftreten von Sektoren 
 -- welche Verschiedenen Sektoren gibt es 
 
-SELECT
+/*SELECT
     DISTINCT sector Industriesektoren
 FROM ccc_list
 ORDER BY sector ASC
 #LIMIT 20
-;
+;*/
+
+-- welche Verschiedenen Branchen gibt es 
+SELECT
+    DISTINCT industry Branchen
+FROM ccc_list
+ORDER BY industry ASC
+
