@@ -19,8 +19,13 @@ ORDER BY sector ASC
 ;*/
 
 -- welche Verschiedenen Branchen gibt es 
-SELECT
+/*SELECT
     DISTINCT industry Branchen
 FROM ccc_list
-ORDER BY industry ASC
+ORDER BY industry ASC*/
+
+SELECT
+    DISTINCT payouts "Auszahlung p.a"
+FROM ccc_list
+ORDER BY payouts ASC;
 
