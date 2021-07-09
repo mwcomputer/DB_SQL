@@ -42,6 +42,8 @@ SELECT
     sector Industriesektoren, # NICHT aggregiert --> organisch
     COUNT(DISTINCT industry) Branchen #aggregiert --> durch Fkt. entstanden
 FROM ccc_list
+#WHERE sector LIKE "Consumer%"
 GROUP BY sector # bei Kombination nicht aggr. /aggr.
+HAVING Branchen > 10
 ORDER BY Branchen DESC
 ;
