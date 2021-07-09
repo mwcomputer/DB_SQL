@@ -3,14 +3,14 @@
 USE boo;
 
 -- Durchschnittspreis einer Aktie / Banken?
-/*
+
 SELECT
 	round(avg(price),2) Durchschnittspreis  -- Abgerundet / 2 Nachkommastellen
 FROM boo.ccc_list
 WHERE industry = "Banks"
 #WHERE industry = "Media"
 ;
-*/
+
 
 -- KOMBINATION Preis/Dividende pro Industriesektor
 /*

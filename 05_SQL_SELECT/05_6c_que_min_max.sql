@@ -17,7 +17,7 @@ FROM boo.ccc_list
 -- 1. Subquery
 -- 2. ORDER BY .... ASC/DESC & LIMIT 1
 
-/*
+
 SELECT
 	ticker SYM,
     c_name Unternehmen,
@@ -25,7 +25,7 @@ SELECT
 FROM boo.ccc_list
 WHERE price = (SELECT max(price) FROM boo.ccc_list)  # Subquery / Klammern!
 #WHERE price = (SELECT min(price) FROM boo.ccc_list) 
-;*/
+;
 
 /*
 SELECT
