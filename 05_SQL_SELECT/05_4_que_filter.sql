@@ -13,6 +13,7 @@ USE boo;
 
 
 --  Eingrenzen/Filtern WHERE & AND/OR etc.
+/*
 SELECT
     ticker AS "SYMBOL",
     c_name "Unternehmen",
@@ -22,7 +23,29 @@ SELECT
     dividend "Dividende" 
 FROM ccc_list
 -- Einzeldaten / Strings
-WHERE sector = "Communication Services"
+#WHERE sector = "Communication Services"
+#WHERE industry = "Media"
+-- Kombination durch AND
+#WHERE sector = "Communication Services" AND industry = "Entertainment"
+#WHERE industry = "Entertainment" AND payouts = 4
+-- Kombination durch AND / OR
+#WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
+-- Kombination durch AND / NOT
+WHERE sector = "Communication Services" AND NOT industry = "Media"
 #ORDER BY price ASC #beginnend mit günstigster Aktie 
 ORDER BY industry ASC
 LIMIT 20;
+*/
+
+
+
+SELECT
+    ticker "SYMBOL",
+    c_name "Unternehmen",
+    industry "Branche"
+FROM ccc_list
+WHERE industry = "Media"
+
+
+ORDER BY industry ASC
+LIMIT 40;
