@@ -29,8 +29,13 @@ SELECT
 FROM ccc_list
 ORDER BY payouts ASC;
 
+
+-- welche Unternehmen zahlen monatlich? 
+
 SELECT
     c_name Unternehmen, 
-    industry Branchen
+    industry Branche
 FROM ccc_list
 WHERE payouts = 12
+ORDER BY Branche ASC 
+;
