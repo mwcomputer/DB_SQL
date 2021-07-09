@@ -18,10 +18,19 @@ ORDER BY sector ASC
 
 
 -- Wieviele Verschiedene Sektoren 
-SELECT
+/*SELECT
 COUNT(DISTINCT sector)AS  "Anzahl der Sektoren"
 FROM ccc_list
-;
+;*/
 
 
 -- Welche Verschiedene Branchen 
+SELECT
+DISTINCT industry Branchen
+FROM ccc_list
+ORDER BY industry ASC
+;
+
+SELECT COUNT(DISTINCT industry) Branchenanzahl
+FROM ccc_list
+;
