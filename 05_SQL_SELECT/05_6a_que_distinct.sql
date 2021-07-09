@@ -29,3 +29,8 @@ SELECT
 FROM ccc_list
 ORDER BY payouts ASC;
 
+SELECT
+    c_name Unternehmen, 
+    industry Branchen
+FROM ccc_list
+WHERE payouts = 12
