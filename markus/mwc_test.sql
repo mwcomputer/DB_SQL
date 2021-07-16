@@ -8,8 +8,7 @@ DROP TABLE IF EXISTS adressbuch;
 CREATE TABLE IF NOT EXISTS adressbuch (Name VARCHAR (45),Straße VARCHAR(45),PLZ VARCHAR(45),Ort VARCHAR(45), Tel INT 
 
 );
-SHOW TABLES;
-DESCRIBE adressbuch;
+
 
 INSERT INTO adressbuch (Name,Straße,PLZ,Ort,Tel)
 VALUES("Markus_Wegs","Pimmelweg_3","49536","Pimmelberg",01701234567);
