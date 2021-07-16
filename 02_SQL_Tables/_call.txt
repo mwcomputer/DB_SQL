@@ -7,7 +7,7 @@ source 02_SQL_Tables/02a_db_table_SQL.sql
 
 source 02_SQL_Tables/02b_db_table_SQL.sql
 
-source 02_SQL_Tables/02c_db_table_SQL.sql
+mysql-ctl cli;
 
 
 
